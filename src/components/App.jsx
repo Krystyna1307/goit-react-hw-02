@@ -4,6 +4,7 @@ import "../index.css";
 import "modern-normalize";
 import Feedback from "./Feedback/Feedback";
 import { useEffect, useState } from "react";
+import Notification from "./Notification/Notification";
 
 const App = () => {
   const [feedback, setFeedback] = useState(() => {
@@ -50,7 +51,7 @@ const App = () => {
           positiveFeedback={positiveFeedback}
         />
       ) : (
-        <p style={{ margin: "15px" }}>No feedback collected yet.</p>
+        <Notification />
       )}
     </div>
   );
